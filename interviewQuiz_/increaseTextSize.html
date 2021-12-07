@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IncreaseText</title>
+</head>
+<body>
+    <label for="text">Enter your text<input type="text" id="input-text-id"></label>
+    <button id="btn-increment" type="button1" onclick="increaseFontSize(this)">Bigger</button>
+    <button id="btn-decrement" type="button2" onclick="increaseFontSize(this)">Smaller</button>
+    
+    <script>
+        function increaseFontSize(target){
+            var inputData = document.getElementById('input-text-id')
+            var computedStyle = window.getComputedStyle ? getComputedStyle(inputData) : inputData.computedStyle;
+            var fontSize = parseFloat(computedStyle && computedStyle.fontSize);
+
+            if(target == document.querySelector('#btn-increment')){
+                fontSize +=5;
+            }if(target == document.querySelector('#btn-decrement')){
+                fontSize -=5;
+            }
+            inputData.style.fontSize = fontSize+ "px";
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase header size</title>
+</head>
+<body>
+    <label for="text">Enter your text<input type="text" id="input-text-id"></label>
+    <button id="button-h1" type="button" onclick="changeHeaderStyle(this)">H1</button>
+    <button id="button-h2" type="button" onclick="changeHeaderStyle(this)">H2</button>
+    <button id="button-h3" type="button" onclick="changeHeaderStyle(this)">H3</button>
+
+    <script>
+
+        function changeHeaderStyle(target){
+            var inputData = document.getElementById('input-text-id')
+            var computedStyle = window.getComputedStyle ? getComputedStyle(inputData) : inputData.computedStyle;
+            var font = parseFloat(computedStyle && computedStyle.fontSize);
+
+            if(target == document.querySelector('#button-h1')){
+                document.write("<h1>font</h1>");
+            }
+            if(target == document.querySelector('#button-h2')){
+                document.write("<h2>font</h2>");
+            }
+            if(target == document.querySelector('#button-h3')){
+                document.write("<h3>font</h3>");
+            }
+            font;
+        }
+
+    </script>
+</body>
+
+</html>

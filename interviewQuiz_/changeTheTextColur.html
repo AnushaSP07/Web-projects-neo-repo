@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeText color</title>
+</head>
+<body>
+    <label for="text">Enter text<input type="text" id="input-text-id"></label>
+    <button type="button" id="button-red" style="background-color: red;" onclick="colorChangeOnClick(this)">Red</button>
+    <button type="button" id="button-blue" style="background-color:blue" onclick="colorChangeOnClick(this)">Blue</button>
+    <button type="button" id="button-green" style="background-color: green;" onclick="colorChangeOnClick(this)">Green</button>
+    <button type="button" id="button-black" style="background-color: black;" onclick="colorChangeOnClick(this)">Black</button>
+
+    <script>
+        function colorChangeOnClick(target){
+            var input = document.getElementById('input-text-id');
+        
+            if(target == document.getElementById('button-red')){
+                input.style.color = "black";
+                input.style.backgroundColor = "red";
+            }
+            if(target == document.getElementById('button-blue')){
+                input.style.color = "blue";
+            }
+            if(target == document.getElementById('button-green')){
+                input.style.color = "green";
+            }
+            if(target == document.getElementById('button-black')){
+                input.style.color = "black";
+            }
+        }
+    </script>
+</body>
+</html>
